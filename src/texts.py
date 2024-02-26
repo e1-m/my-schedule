@@ -66,6 +66,12 @@ texts: dict = {
         'new_link_input': 'Please enter a new link to the conference (full link): ',
         'new_password_input': 'Please enter a new password to log into the conference: ',
         'new_duration_input': 'Please enter a new duration of the conference (in minutes): ',
+        'week': 'Week: ',
+    },
+    'week': {
+        'odd_week': 'Odd week',
+        'even_week': 'Even week',
+        'every_week': 'Every week',
     },
     'days': {
         'monday': 'Monday',
@@ -104,4 +110,3 @@ def read_texts(language):
             texts.update(json.load(f))
     except FileNotFoundError:
         return
-

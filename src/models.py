@@ -1,7 +1,6 @@
 import json
 import os
 import sys
-from datetime import datetime
 from io import StringIO
 from threading import Thread
 from time import sleep
@@ -11,6 +10,8 @@ import schedule as planner
 
 from settings import settings
 from scaners import scan_int
+import utils
+import consts
 
 
 class Menu:
@@ -85,13 +86,14 @@ class Time:
 
 class Conference:
     def __init__(self, title: str, link: str, start_time: str, duration: int = settings['default_conference_duration'],
-                 password: str = None, autostart_permission: bool = True):
+                 password: str = None, autostart_permission: bool = True, week: int = consts.EVERY_WEEK):
         self.title = title
         self.link = link
         self.start_time: Time = Time(*map(int, start_time.split(':')))
         self.duration = duration
         self.password = password
         self.autostart_permission = autostart_permission
+        self.week = week
 
     def start_conference(self) -> None:
         """
@@ -125,6 +127,10 @@ class Conference:
     def set_autostart_permission(self, autostart_permission: bool) -> None:
         self.autostart_permission = autostart_permission
 
+    def set_week(self, week: int) -> None:
+        if 0 <= week <= 2:
+            self.week = week
+
     def to_dict(self) -> dict:
         """
         Converts the object to a dictionary
@@ -137,6 +143,7 @@ class Conference:
             'password': self.password,
             'start_time': self.start_time.get_str(),
             'duration': self.duration,
+            'week': self.week,
         }
         return data
 
@@ -174,12 +181,19 @@ class Schedule:
         """
         return self.conferences.get(day)
 
+    def get_this_week_daily_schedule(self, day: str) -> list:
+        """
+        :return: list of conferences on the day
+        """
+        current_week = utils.get_week()
+        return list(
+            filter(lambda conf: conf.week == consts.EVERY_WEEK or conf.week == current_week % 2, self.conferences.get(day)))
+
     def get_today_schedule(self) -> list:
         """
         :return: list of today's conferences
         """
-        days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
-        return self.get_daily_schedule(days[datetime.now().weekday()])
+        return self.get_this_week_daily_schedule(utils.get_today())
 
     def get_days_with_conferences(self) -> list:
         """
@@ -188,20 +202,13 @@ class Schedule:
         days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
         return [day for day in days if self.conferences[day]]
 
-    def add_conference(self, day: str, conference_to_add: Conference) -> bool:
+    def add_conference(self, day: str, conference_to_add: Conference) -> None:
         """
-        Add the conference to the schedule if the time is available
+        Add the conference to the schedule
         :param day: day to which should add the conference
         :param conference_to_add:
-        :return: True if the conference is added, False if not
         """
-        for conference in self.conferences.get(day):
-            occupied_time_lower = conference.start_time.get_in_minutes() - settings['default_conference_duration']
-            occupied_time_upper = conference.start_time.get_in_minutes() + conference.duration
-            if occupied_time_lower < conference_to_add.start_time.get_in_minutes() < occupied_time_upper:
-                return False
         self.conferences.get(day).append(conference_to_add)
-        return True
 
     def shift_time_of_all_conferences(self, minutes: int) -> None:
         """
@@ -215,6 +222,10 @@ class Schedule:
                     conference.start_time = conference.start_time.add_minutes(minutes)
                 else:
                     conference.start_time = conference.start_time.subtract_minutes(-minutes)
+
+    def sort_schedule(self):
+        for day in self.get_days_with_conferences():
+            self.get_daily_schedule(day).sort(key=lambda conference: conference.start_time.get_in_minutes())
 
     def update_autostart_planner(self) -> None:
         """

@@ -40,7 +40,13 @@
         "new_start_time_input": "Bitte geben Sie eine neue Startzeit f\u00fcr die Konferenz ein (HH:MM): ",
         "new_link_input": "Bitte geben Sie einen neuen Link zur Konferenz ein (vollst\u00e4ndiger Link): ",
         "new_password_input": "Bitte geben Sie ein neues Passwort f\u00fcr den Zugang zur Konferenz ein: ",
-        "new_duration_input": "Bitte geben Sie eine neue Dauer der Konferenz ein (in Minuten): "
+        "new_duration_input": "Bitte geben Sie eine neue Dauer der Konferenz ein (in Minuten): ",
+        "week": "Woche: "
+    },
+    "week": {
+        "odd_week": "Ungerade Woche",
+        "even_week": "Gerade Woche",
+        "every_week": "Jede Woche"
     },
     "days": {
         "monday": "Montag",
