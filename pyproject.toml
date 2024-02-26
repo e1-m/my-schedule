@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "myschedule"
+version = "0.1.0"
+description = ""
+authors = ["Ivan Mihun <vsk76090@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pyperclip = "^1.8.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

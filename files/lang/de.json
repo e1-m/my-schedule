@@ -1,0 +1,70 @@
+{
+    "main_menu": "1. Zeige Zeitplan\n2. Einstellungen\n0. Minimieren ins Systemtray\n==>",
+    "settings_menu": {
+        "main_part": "Einstellungen:\n1. Zeitplan\n2. Automatischer Start von Konferenzen\n3. Zeit\n4. Sprache\n5. Konsolenfarbe\n6. Zeitplan-Datei \u00e4ndern\n",
+        "open_in_tray_true": "7. Nicht im Systemtray \u00f6ffnen beim Start\n",
+        "open_in_tray_false": "7. Im Systemtray \u00f6ffnen beim Start\n"
+    },
+    "schedule_menu": "1. Montag\n2. Dienstag\n3. Mittwoch\n4. Donnerstag\n5. Freitag\n6. Samstag\n7. Sonntag\n0. Zur\u00fcck\n==>",
+    "autostart_menu": {
+        "autostart_true": "1. Autostart deaktivieren\n",
+        "autostart_false": "1. Autostart aktivieren\n",
+        "pre-start_minutes": "2. Vorbereitungszeit",
+        "pre-start_minutes_input": "Bitte geben Sie die Anzahl der Minuten vor dem Start ein:"
+    },
+    "time_menu": {
+        "duration": "1. Standarddauer der Konferenzen",
+        "move_time": "2. Startzeit aller Konferenzen verschieben",
+        "duration_input": "Bitte geben Sie die Standarddauer der Konferenz ein (Minuten): ",
+        "move_time_input": "Bitte geben Sie die zu verschiebenden Minuten ein (negative Zahl f\u00fcr R\u00fcckw\u00e4rts):"
+    },
+    "language_menu": "W\u00e4hlen Sie eine Sprache:\n1. English\n2. \u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430\n3. \u0420\u0443\u0441\u0441\u043a\u0438\u0439\n4. Deutsch\n0. Zur\u00fcck\n==>",
+    "add_conference": {
+        "add_conference": "Konferenz hinzuf\u00fcgen\n",
+        "title_input": "Bitte geben Sie den Titel der Konferenz ein: ",
+        "time_input": "Bitte geben Sie die Startzeit der Konferenz ein (HH:MM): ",
+        "link_input": "Bitte geben Sie den Link zur Konferenz ein (vollst\u00e4ndiger Link): ",
+        "duration_exception": "Die Konferenz kann nicht hinzugef\u00fcgt werden. Diese Zeit ist bereits belegt"
+    },
+    "edit_conference": {
+        "title": "Titel: ",
+        "start_time": "Startzeit: ",
+        "link": "Link: ",
+        "password": "Passwort: ",
+        "duration": "Dauer: ",
+        "password_does_not_exist": "Passwort wurde noch nicht festgelegt",
+        "auto_start_permission_false": "Erlaube der Konferenz, automatisch zu starten",
+        "auto_start_permission_true": "Verhindere, dass die Konferenz automatisch startet",
+        "delete": "Die Konferenz l\u00f6schen",
+        "new_title_input": "Bitte geben Sie einen neuen Titel f\u00fcr die Konferenz ein: ",
+        "new_start_time_input": "Bitte geben Sie eine neue Startzeit f\u00fcr die Konferenz ein (HH:MM): ",
+        "new_link_input": "Bitte geben Sie einen neuen Link zur Konferenz ein (vollst\u00e4ndiger Link): ",
+        "new_password_input": "Bitte geben Sie ein neues Passwort f\u00fcr den Zugang zur Konferenz ein: ",
+        "new_duration_input": "Bitte geben Sie eine neue Dauer der Konferenz ein (in Minuten): "
+    },
+    "days": {
+        "monday": "Montag",
+        "tuesday": "Dienstag",
+        "wednesday": "Mittwoch",
+        "thursday": "Donnerstag",
+        "friday": "Freitag",
+        "saturday": "Samstag",
+        "sunday": "Sonntag"
+    },
+    "minutes": "Min",
+    "back": "0. Zur\u00fcck\n==>",
+    "console_color_input": "1 - Schwarz\n2 - Blau\n3 - Gr\u00fcn\n4 - Hellblau\n5 - Rot\n6 - Lila\n7 - Gelb\n8 - Wei\u00df\n9 - Grau\nGeben Sie die Farbnummern mit \"/\" ein (Text/Hintergrund): \n",
+    "schedule_file_input": "Geben Sie einen Dateinamen f\u00fcr die Zeitplandatei ohne Erweiterung ein. (Aktueller Dateiname: ",
+    "filename_input_exception": "Ung\u00fcltiger Dateiname. Der Dateiname darf nicht enthalten: / : \\ * ? \" < > | .",
+    "int_input_exception": "Der Wert muss eine ganze Zahl sein. Bitte geben Sie eine ganze Zahl ein: ",
+    "time_input_exceptions": {
+        "incorrect_format": "Der Wert muss im HH:MM-Format sein. Bitte geben Sie erneut ein: ",
+        "incorrect_data": "Falsche Zeit. Bitte geben Sie erneut ein: "
+    },
+    "color_input_exceptions": {
+        "incorrect_format": "Der Wert muss im Text/Hintergrund-Format sein. Bitte geben Sie erneut ein: ",
+        "incorrect_data": "Die Zahlen liegen au\u00dferhalb des Bereichs oder Text = Hintergrund. Bitte geben Sie erneut ein: "
+    },
+    "min_value_exception": "Der Wert muss gr\u00f6\u00dfer oder gleich sein ",
+    "max_value_exception": "Der Wert muss kleiner oder gleich sein "
+}

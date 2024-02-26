@@ -1,0 +1,70 @@
+{
+    "main_menu": "1. Show schedule\n2. Settings\n0. Minimize to system tray\n==>",
+    "settings_menu": {
+        "main_part": "Settings:\n1. Schedule\n2. Automatic start of conferences\n3. Time\n4. Language\n5. Console color\n6. Change schedule file\n",
+        "open_in_tray_true": "7. Do not open in tray at start\n",
+        "open_in_tray_false": "7. Open in tray at start\n"
+    },
+    "schedule_menu": "1. Monday\n2. Tuesday\n3. Wednesday\n4. Thursday\n5. Friday\n6. Saturday\n7. Sunday\n0. Back\n==>",
+    "autostart_menu": {
+        "autostart_true": "1. Disable autostart\n",
+        "autostart_false": "1. Enable autostart\n",
+        "pre-start_minutes": "2. Preparatory time",
+        "pre-start_minutes_input": "Please enter the number of the pre-start minutes:"
+    },
+    "time_menu": {
+        "duration": "1. Default duration of conferences",
+        "move_time": "2. Move the start time of all conferences",
+        "duration_input": "Please enter default duration of conference (minutes): ",
+        "move_time_input": "Please enter minutes to move (negative number if backward):"
+    },
+    "language_menu": "Choose a language:\n1. English\n2. \u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430\n3. \u0420\u0443\u0441\u0441\u043a\u0438\u0439\n4. Deutsch\n0. Back\n==>",
+    "add_conference": {
+        "add_conference": "Add conference\n",
+        "title_input": "Please enter the title of the conference: ",
+        "time_input": "Please enter the start time of the conference (HH:MM): ",
+        "link_input": "Please enter the link to the conference (full link): ",
+        "duration_exception": "The conference cannot be added. This time has already been occupied"
+    },
+    "edit_conference": {
+        "title": "Title: ",
+        "start_time": "Start time: ",
+        "link": "Link: ",
+        "password": "Password: ",
+        "duration": "Duration: ",
+        "password_does_not_exist": "Password has not been set yet",
+        "auto_start_permission_false": "Allow the conference to start automatically",
+        "auto_start_permission_true": "Prevent the conference from starting automatically",
+        "delete": "Delete the conference",
+        "new_title_input": "Please enter a new title of the conference: ",
+        "new_start_time_input": "Please enter a new start time of the conference (HH:MM): ",
+        "new_link_input": "Please enter a new link to the conference (full link): ",
+        "new_password_input": "Please enter a new password to log into the conference: ",
+        "new_duration_input": "Please enter a new duration of the conference (in minutes): "
+    },
+    "days": {
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday",
+        "friday": "Friday",
+        "saturday": "Saturday",
+        "sunday": "Sunday"
+    },
+    "minutes": "min",
+    "back": "0. Back\n==>",
+    "console_color_input": "1 - Black\n2 - Blue\n3 - Green\n4 - Light Blue\n5 - Red\n6 - Purple\n7 - Yellow\n8 - White\n9 - Grey\nEnter the color numbers using \"/\" (text/background): \n",
+    "schedule_file_input": "Enter a filename of the schedule file without extension. (Current filename: ",
+    "filename_input_exception": "Invalid file name. Filename should not contain: / : \\ * ? \" < > | .",
+    "int_input_exception": "The value must be an integer number. Please enter an integer number: ",
+    "time_input_exceptions": {
+        "incorrect_format": "The value must be in HH:MM format. Please enter again: ",
+        "incorrect_data": "Incorrect time. Please enter again: "
+    },
+    "color_input_exceptions": {
+        "incorrect_format": "The value must be in text/background format. Please enter again: ",
+        "incorrect_data": "The numbers are out of range or text = background. Please enter again: "
+    },
+    "min_value_exception": "The value must be greater or equal to ",
+    "max_value_exception": "The value must be smaller or equal to "
+}
